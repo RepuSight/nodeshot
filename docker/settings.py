@@ -10,6 +10,7 @@ ROOT_URLCONF = 'urls' #
 
 DEBUG = False
 DOMAIN = os.environ.get('DOMAIN', 'localhost')
+PROTOCOL = 'http'
 
 DATABASES = {
     'default': {
