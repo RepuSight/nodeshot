@@ -14,5 +14,5 @@ if [ ! -f /app/first_start ]; then
     touch /app/first_start
 fi
 
-uwsgi --http 0.0.0.0:3031 --chdir /app \
+uwsgi --http 0.0.0.0:3031 --chdir /app --static-map /static=/app/static/ \
     --wsgi-file wsgi.py --master --processes 4 --threads 2
